@@ -8,7 +8,7 @@ A modern and responsive landing page developed for a buffet business, designed t
 
 ## 📸 Preview
 
-![Website Preview](./assets/images/print-main-screen.png)
+![Website Preview](./assets/images/print-main-screen.PNG)
 
 ## 🚀 Features
 
