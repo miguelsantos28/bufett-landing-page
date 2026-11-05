@@ -28,7 +28,7 @@ A modern and responsive landing page developed for a buffet business, designed t
 - HTML5
 - CSS3
 - JavaScript
-- GSAP (if used in this project)
+- GSAP
 
 ## 📂 Project Structure
 
