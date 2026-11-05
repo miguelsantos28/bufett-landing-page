@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDITE: título e descrição da página (aparecem no Google e ao compartilhar o link).
+       O nome do buffet também é aplicado ao título via SITE_CONFIG.brand.name em js/script.js -->
+  <title>[Nome do Buffet] | Buffet para eventos</title>
+  <meta name="description" content="[Descrição curta do buffet para o Google, até 155 caracteres.]">
+  <meta name="theme-color" content="#0B2A4A">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bibliotecas externas (somente GSAP e ScrollTrigger). Carregadas com defer, antes do nosso script. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <!-- SUBSTITUA A LOGO: troque o arquivo assets/images/logo-placeholder.svg (ou altere o caminho em SITE_CONFIG.brand.logo) -->
+      <a class="brand-logo" href="#home" aria-label="Ir para o início">
+        <img data-bind-src="brand.logo" data-bind-alt="brand.logoAlt" src="assets/images/logo-placeholder.svg" alt="Logo do buffet" width="220" height="64">
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#atracoes">Atrações</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--accent site-nav__cta" data-whatsapp href="#contato">Fale Conosco</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <svg class="hero__rings" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+        <circle class="ring" pathLength="1" cx="400" cy="400" r="395"/>
+        <circle class="ring" pathLength="1" cx="400" cy="400" r="330"/>
+        <circle class="ring" pathLength="1" cx="400" cy="400" r="265"/>
+      </svg>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <!-- EDITE O SLOGAN em SITE_CONFIG.brand.slogan (js/script.js). O texto abaixo é apenas o reserva. -->
+          <h1 class="hero__title" id="hero-title" data-bind="brand.slogan">[Slogan do buffet: a frase principal da sua proposta]</h1>
+          <!-- EDITE: subtítulo do hero -->
+          <p class="hero__subtitle">[Apresentação em uma ou duas frases: o que o buffet faz, para quem e em qual cidade.]</p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" data-whatsapp href="#contato">Fale Conosco</a>
+            <a class="btn btn--ghost" href="#sobre">Conheça Nosso Buffet</a>
+          </div>
+        </div>
+        <figure class="hero__figure">
+          <!-- SUBSTITUA A IMAGEM: assets/images/hero-placeholder.svg (pode ser .jpg/.webp, mantenha proporção quadrada) -->
+          <img class="hero__image" src="assets/images/hero-placeholder.svg" alt="[Descreva a foto do espaço ou de um evento]" width="900" height="900" fetchpriority="high">
+          <figcaption class="hero__caption">Foto ilustrativa. Troque pela imagem real.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section about" id="sobre" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__text">
+          <h2 class="section-title" id="about-title">[Título da seção sobre o buffet]</h2>
+          <!-- EDITE: textos institucionais -->
+          <p class="about__lead" data-reveal>[Texto introdutório: uma frase que resume a proposta do buffet.]</p>
+          <p data-reveal>[Descrição detalhada: conte a história, a proposta e o que torna o buffet diferente. Use dois ou três parágrafos curtos.]</p>
+
+          <!-- EDITE: até três diferenciais (mantenha o mesmo formato) -->
+          <dl class="differentials">
+            <div class="differentials__item" data-reveal>
+              <dt>[Diferencial: atendimento]</dt>
+              <dd>[Explique em uma frase como esse diferencial aparece no dia do evento.]</dd>
+            </div>
+            <div class="differentials__item" data-reveal>
+              <dt>[Diferencial: estrutura]</dt>
+              <dd>[Explique em uma frase o que o espaço e a equipe oferecem.]</dd>
+            </div>
+            <div class="differentials__item" data-reveal>
+              <dt>[Diferencial: experiência]</dt>
+              <dd>[Explique em uma frase o que o convidado vive no evento.]</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="about__media" aria-hidden="false">
+          <!-- SUBSTITUA AS IMAGENS: about-placeholder.svg (retrato 4:5) e about-placeholder-2.svg (quadrada) -->
+          <img class="about__img about__img--main" src="assets/images/about-placeholder.svg" alt="[Descreva a foto do local]" width="720" height="900" loading="lazy" decoding="async">
+          <img class="about__img about__img--side" src="assets/images/about-placeholder-2.svg" alt="[Descreva o detalhe do local]" width="520" height="520" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ATRAÇÕES ============ -->
+    <section class="section attractions" id="atracoes" aria-labelledby="attractions-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="attractions-title">[Título da seção de atrações]</h2>
+          <p class="section-head__text">[Frase de apoio: explique o que o cliente encontra aqui.]</p>
+        </div>
+        <!-- Os cards são gerados a partir de SITE_CONFIG.attractions em js/script.js -->
+        <ul class="attractions__grid" id="attractions-grid"></ul>
+        <noscript><p class="noscript-note">Ative o JavaScript para ver as atrações.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ CARDÁPIO ============ -->
+    <section class="section menu" id="cardapio" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="menu-title">[Título da seção de cardápio]</h2>
+          <p class="section-head__text">[Frase de apoio: como o cardápio é montado e personalizado.]</p>
+        </div>
+        <!-- Filtros e pratos vêm de SITE_CONFIG.menu em js/script.js -->
+        <div class="menu__filters" id="menu-filters" role="group" aria-label="Filtrar cardápio por categoria"></div>
+        <ul class="menu__grid" id="menu-grid" aria-live="polite"></ul>
+        <noscript><p class="noscript-note">Ative o JavaScript para ver o cardápio.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head section-head--with-controls">
+          <h2 class="section-title" id="testimonials-title">[Título da seção de depoimentos]</h2>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="testimonials-prev" type="button" aria-label="Depoimento anterior">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="carousel-btn" id="testimonials-next" type="button" aria-label="Próximo depoimento">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <!-- Depoimentos vêm de SITE_CONFIG.testimonials em js/script.js -->
+        <div class="carousel" id="testimonials-carousel" role="region" aria-roledescription="carrossel" aria-label="Depoimentos de clientes" tabindex="0">
+          <ul class="carousel__track" id="testimonials-track"></ul>
+        </div>
+        <noscript><p class="noscript-note">Ative o JavaScript para ver os depoimentos.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ LOCALIZAÇÃO E CONTATO ============ -->
+    <section class="section contact" id="contato" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <h2 class="section-title" id="contact-title">[Título da seção de contato]</h2>
+          <p class="contact__lead">[Frase de convite: diga como o cliente pode pedir um orçamento.]</p>
+
+          <!-- EDITE os dados em SITE_CONFIG.contact (js/script.js). O texto aqui é apenas o reserva. -->
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+              <div><strong>Endereço</strong><a data-contact="address" href="#contato" target="_blank" rel="noopener noreferrer">[Rua, número, bairro, cidade e estado]</a></div>
+            </li>
+            <li>
+              <span class="contact-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+              <div><strong>Telefone</strong><a data-contact="phone" href="tel:+55DDDNUMERO">[(DDD) 0000-0000]</a></div>
+            </li>
+            <li>
+              <span class="contact-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+              <div><strong>WhatsApp</strong><a data-contact="whatsapp" data-whatsapp href="#contato">[(DDD) 90000-0000]</a></div>
+            </li>
+            <li>
+              <span class="contact-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+              <div><strong>E-mail</strong><a data-contact="email" href="mailto:contato@exemplo.com">[contato@seudominio.com.br]</a></div>
+            </li>
+            <li>
+              <span class="contact-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Horário de atendimento</strong><span data-contact="hours">[Dias e horários de atendimento]</span></div>
+            </li>
+          </ul>
+
+          <ul class="socials" id="contact-socials" aria-label="Redes sociais"></ul>
+          <a class="btn btn--accent contact__cta" data-whatsapp href="#contato">Fale Conosco</a>
+        </div>
+
+        <div class="contact__map">
+          <!-- O mapa é montado por js/script.js a partir de SITE_CONFIG.map. Sem endereço configurado, mostra um aviso. -->
+          <div class="map" id="map-container"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand-logo" href="#home" aria-label="Ir para o início">
+          <img data-bind-src="brand.logo" data-bind-alt="brand.logoAlt" src="assets/images/logo-placeholder.svg" alt="Logo do buffet" width="220" height="64" loading="lazy">
+        </a>
+        <p data-bind="brand.shortDescription">[Breve descrição institucional do buffet.]</p>
+      </div>
+
+      <nav aria-label="Rodapé">
+        <h2 class="footer__heading">Navegação</h2>
+        <ul class="footer__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#atracoes">Atrações</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer__heading">Contato</h2>
+        <ul class="footer__list">
+          <li><a data-contact="phone" href="tel:+55DDDNUMERO">[(DDD) 0000-0000]</a></li>
+          <li><a data-contact="email" href="mailto:contato@exemplo.com">[contato@seudominio.com.br]</a></li>
+          <li><span data-contact="address-text">[Endereço completo]</span></li>
+        </ul>
+        <ul class="socials socials--footer" id="footer-socials" aria-label="Redes sociais"></ul>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; <span id="footer-year">2025</span> <span data-bind="brand.name">[Nome do Buffet]</span>. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÃO FLUTUANTE DE WHATSAPP ============ -->
+  <a class="whatsapp-float" data-whatsapp href="#contato" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.02 3C8.84 3 3 8.83 3 16c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.72A13 13 0 0 0 16.02 29C23.2 29 29 23.17 29 16S23.2 3 16.02 3zm0 23.8c-1.95 0-3.86-.53-5.53-1.52l-.4-.24-3.98 1.02 1.06-3.88-.26-.4A10.76 10.76 0 0 1 5.2 16c0-5.96 4.86-10.8 10.82-10.8S26.8 10.04 26.8 16s-4.86 10.8-10.78 10.8zm5.93-8.08c-.32-.16-1.92-.95-2.22-1.06-.3-.1-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.54.1-.22.05-.4-.03-.57-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.7 0 1.6 1.17 3.14 1.33 3.36.16.22 2.3 3.5 5.57 4.91.78.34 1.38.54 1.86.69.78.25 1.49.21 2.05.13.63-.1 1.92-.78 2.19-1.54.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37z"/></svg>
+  </a>
+</body>
+</html>

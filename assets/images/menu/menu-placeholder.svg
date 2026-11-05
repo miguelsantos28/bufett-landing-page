@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-label="Foto do prato">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FCEBD0"/><stop offset="1" stop-color="#EBB766"/></linearGradient></defs>
+<rect width="640" height="480" fill="url(#g)"/>
+<circle cx="525" cy="96" r="106" fill="#ffffff" opacity="0.18"/>
+<circle cx="77" cy="432" r="144" fill="#ffffff" opacity="0.12"/>
+<text x="50%" y="48%" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0F3556" opacity="0.75">IMAGEM DEMONSTRATIVA</text>
+<text x="50%" y="48%" dy="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0F3556" opacity="0.6">Foto do prato · 640x480</text>
+</svg>

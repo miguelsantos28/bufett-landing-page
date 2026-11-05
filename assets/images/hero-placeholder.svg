@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Foto principal do local ou evento">
+<rect width="1200" height="1200" fill="#CFE8F6"/>
+<circle cx="983.9999999999999" cy="264.0" r="360.0" fill="#8FD0F0" opacity=".55"/>
+<circle cx="216.0" cy="1020.0" r="432.0" fill="#13315C" opacity=".5"/>
+<circle cx="660.0" cy="660.0" r="144.0" fill="#F2B632" opacity=".85"/>
+<text x="50%" y="600.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="54.0" font-weight="700" fill="#0B2545">IMAGEM DEMONSTRATIVA</text>
+<text x="50%" y="678.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="42.00000000000001" fill="#0B2545">Foto principal do local ou evento (1200x1200)</text>
+</svg>

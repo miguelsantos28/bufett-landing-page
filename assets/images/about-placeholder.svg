@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1250" viewBox="0 0 1000 1250" role="img" aria-label="Foto do espaco">
+<rect width="1000" height="1250" fill="#DCEFF9"/>
+<circle cx="820.0" cy="275.0" r="300.0" fill="#8FD0F0" opacity=".55"/>
+<circle cx="180.0" cy="1062.5" r="360.0" fill="#13315C" opacity=".5"/>
+<circle cx="550.0" cy="687.5" r="120.0" fill="#F2B632" opacity=".85"/>
+<text x="50%" y="625.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="45.0" font-weight="700" fill="#0B2545">IMAGEM DEMONSTRATIVA</text>
+<text x="50%" y="690.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="35.0" fill="#0B2545">Foto do espaco (1000x1250)</text>
+</svg>
